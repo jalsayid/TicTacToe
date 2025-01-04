@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #f097e0;
+    --back: linear-gradient(to bottom, #00163e, #013f79);
+    --winning-blocks: #305fa5e5;
+
+}
+
+body {
+    color: var(--white);
+    font-family: "Chakra Petch", sans-serif;
+}
+
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--back);
+}
+
+#gameboard {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: #ffffff;
+    border-color: var(--white);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.X, .O {
+    position: absolute;
+    width: 57px;
+    height: 106px;
+    font-size: 80px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    color: #F097E0;
+    word-wrap: break-word;
+}
+
+.X::after {
+    content: 'X';
+    transform: rotate(-26.36deg);
+}
+
+.O::after {
+    content: 'O';
+    transform: rotate(26.61deg);
+}
+#start-heading{
+    margin-top: -70px;
+}
